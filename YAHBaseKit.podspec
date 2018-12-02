@@ -97,16 +97,49 @@ Pod::Spec.new do |s|
   # s.public_header_files = "Classes/**/*.h"
 
   s.subspec 'extobjc' do |ss|
-
     ss.public_header_files = 'YAHBaseKit/extobjc/*.h'
     ss.source_files = 'YAHBaseKit/extobjc'
   end
 
-  s.subspec 'Category' do |ss|
+  s.subspec 'ToolUtils' do |ss|
+    ss.public_header_files = 'YAHBaseKit/ToolUtils/*.h'
+    ss.source_files = 'YAHBaseKit/ToolUtils'
+  end
 
-    ss.subspec 'Category' do |sss|
+  s.subspec 'YAHKVOController' do |ss|
+    ss.public_header_files = 'YAHBaseKit/YAHKVOController/*.h'
+    ss.source_files = 'YAHBaseKit/YAHKVOController'
+  end
+
+  s.subspec 'Category' do |ss|
+    ss.subspec 'NSObject' do |sss|
       sss.public_header_files = 'YAHBaseKit/Category/NSObject/*.h'
       sss.source_files = 'YAHBaseKit/Category/NSObject'
+    end
+    ss.subspec 'NSData' do |sss|
+      sss.public_header_files = 'YAHBaseKit/Category/NSData/*.h'
+      sss.source_files = 'YAHBaseKit/Category/NSData'
+    end
+    ss.subspec 'NSDate' do |sss|
+      sss.public_header_files = 'YAHBaseKit/Category/NSDate/*.h'
+      sss.source_files = 'YAHBaseKit/Category/NSDate'
+    end
+    ss.subspec 'NSString' do |sss|
+      sss.dependency 'YAHBaseKit/Category/NSData'
+      sss.public_header_files = 'YAHBaseKit/Category/NSString/*.h'
+      sss.source_files = 'YAHBaseKit/Category/NSString'
+    end
+    ss.subspec 'NSTimer' do |sss|
+      sss.public_header_files = 'YAHBaseKit/Category/NSTimer/*.h'
+      sss.source_files = 'YAHBaseKit/Category/NSTimer'
+    end
+    ss.subspec 'UIColor' do |sss|
+      sss.public_header_files = 'YAHBaseKit/Category/UIColor/*.h'
+      sss.source_files = 'YAHBaseKit/Category/UIColor'
+    end
+    ss.subspec 'UIImage' do |sss|
+      sss.public_header_files = 'YAHBaseKit/Category/UIImage/*.h'
+      sss.source_files = 'YAHBaseKit/Category/UIImage'
     end
   end
 

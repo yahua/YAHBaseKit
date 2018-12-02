@@ -97,3 +97,19 @@ void mtl_executeCleanupBlock (__strong mtl_cleanupBlock_t *block);
 
 #define mtl_strongify_(INDEX, VAR) \
     __strong __typeof__(VAR) VAR = metamacro_concat(VAR, _weak_);
+
+#ifndef execute_block_if_nonnull
+#define execute_block_if_nonnull(block, ...)\
+if(block) {\
+block(__VA_ARGS__);\
+}
+#endif
+
+#define YAH_Localized(key)  NSLocalizedString(key,nil)
+
+#ifdef DEBUG
+#define LRString [NSString stringWithFormat:@"%s", __FILE__].lastPathComponent
+#define YAHLog(...) printf("%s %s 第%d行: %s\n\n",[[[NSDate date] stringWithFormat:@"YYYY-MM-dd hh:mm:ss.SSS"] UTF8String], [LRString UTF8String] ,__LINE__, [[NSString stringWithFormat:__VA_ARGS__] UTF8String]);
+#else
+#   define YAHLog(...)
+#endif
