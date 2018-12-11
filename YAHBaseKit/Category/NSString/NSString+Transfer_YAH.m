@@ -267,4 +267,9 @@ static char firstLetterArray[HANZI_COUNT] =
     return [[self stringByReplacingOccurrencesOfString:@" " withString:@""] copy];
 }
 
++ (NSString *)yah_formalNilString:(NSString *)orgString {
+    
+    return (orgString == nil ? @"" : orgString);
+}
+
 @end

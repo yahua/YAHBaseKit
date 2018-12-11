@@ -141,6 +141,10 @@ Pod::Spec.new do |s|
       sss.public_header_files = 'YAHBaseKit/Category/UIImage/*.h'
       sss.source_files = 'YAHBaseKit/Category/UIImage'
     end
+    ss.subspec 'NSDictionary' do |sss|
+      sss.public_header_files = 'YAHBaseKit/Category/NSDictionary/*.h'
+      sss.source_files = 'YAHBaseKit/Category/NSDictionary'
+    end
   end
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #

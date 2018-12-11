@@ -23,4 +23,6 @@
 
 - (NSString *)removeSpace;
 
++ (NSString *)yah_formalNilString:(NSString *)orgString;
+
 @end

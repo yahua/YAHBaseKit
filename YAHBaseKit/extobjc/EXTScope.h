@@ -8,6 +8,7 @@
 //
 
 #import "metamacros.h"
+#import <objc/runtime.h>
 
 /**
  * \@onExit defines some code to be executed when the current scope exits. The
@@ -113,3 +114,13 @@ block(__VA_ARGS__);\
 #else
 #   define YAHLog(...)
 #endif
+
+static inline void YAH_swizzleSelector(Class class, SEL originalSelector, SEL swizzledSelector) {
+    Method originalMethod = class_getInstanceMethod(class, originalSelector);
+    Method swizzledMethod = class_getInstanceMethod(class, swizzledSelector);
+    if (class_addMethod(class, originalSelector, method_getImplementation(swizzledMethod), method_getTypeEncoding(swizzledMethod))) {
+        class_replaceMethod(class, swizzledSelector, method_getImplementation(originalMethod), method_getTypeEncoding(originalMethod));
+    } else {
+        method_exchangeImplementations(originalMethod, swizzledMethod);
+    }
+}
