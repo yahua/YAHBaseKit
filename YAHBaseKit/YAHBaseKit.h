@@ -17,6 +17,7 @@
 
 //ToolUtils
 #import "Utility.h"
+#import "OMTSystemInfo.h"
 
 //NSData
 #import "NSData+Base64.h"
