@@ -36,6 +36,7 @@
 		2CB87CD921AD9FEF0042D9F6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CB87CD721AD9FEF0042D9F6 /* LaunchScreen.storyboard */; };
 		2CB87CDC21AD9FEF0042D9F6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CB87CDB21AD9FEF0042D9F6 /* main.m */; };
 		2CBF149821B03E7F00CA2AED /* EXTScope.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CBF145C21B03E7F00CA2AED /* EXTScope.m */; };
+		2CEC6055227E892300E50258 /* OMTSystemInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CEC6054227E892300E50258 /* OMTSystemInfo.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -98,6 +99,8 @@
 		2CBF145D21B03E7F00CA2AED /* EXTScope.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXTScope.h; sourceTree = "<group>"; };
 		2CBF145E21B03E7F00CA2AED /* EXTKeyPathCoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXTKeyPathCoding.h; sourceTree = "<group>"; };
 		2CBF146921B03E7F00CA2AED /* YAHBaseKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YAHBaseKit.h; sourceTree = "<group>"; };
+		2CEC6053227E892300E50258 /* OMTSystemInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OMTSystemInfo.h; sourceTree = "<group>"; };
+		2CEC6054227E892300E50258 /* OMTSystemInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OMTSystemInfo.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +117,8 @@
 		2C8D769C21B3626E00E90E41 /* ToolUtils */ = {
 			isa = PBXGroup;
 			children = (
+				2CEC6053227E892300E50258 /* OMTSystemInfo.h */,
+				2CEC6054227E892300E50258 /* OMTSystemInfo.m */,
 				2C8D769D21B3626E00E90E41 /* Utility.m */,
 				2C8D769E21B3626E00E90E41 /* Utility.h */,
 			);
@@ -359,6 +364,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CEC6055227E892300E50258 /* OMTSystemInfo.m in Sources */,
 				2C8D771421B3628F00E90E41 /* UIImage+Orientation.m in Sources */,
 				2CBF149821B03E7F00CA2AED /* EXTScope.m in Sources */,
 				2C8D772021B3628F00E90E41 /* NSString+Transfer_YAH.m in Sources */,
