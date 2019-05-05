@@ -37,6 +37,7 @@
 		2CB87CDC21AD9FEF0042D9F6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CB87CDB21AD9FEF0042D9F6 /* main.m */; };
 		2CBF149821B03E7F00CA2AED /* EXTScope.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CBF145C21B03E7F00CA2AED /* EXTScope.m */; };
 		2CEC6055227E892300E50258 /* OMTSystemInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CEC6054227E892300E50258 /* OMTSystemInfo.m */; };
+		2CEC6059227E930100E50258 /* NSDictionary+YAHUnicode.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CEC6058227E930100E50258 /* NSDictionary+YAHUnicode.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -101,6 +102,8 @@
 		2CBF146921B03E7F00CA2AED /* YAHBaseKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YAHBaseKit.h; sourceTree = "<group>"; };
 		2CEC6053227E892300E50258 /* OMTSystemInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OMTSystemInfo.h; sourceTree = "<group>"; };
 		2CEC6054227E892300E50258 /* OMTSystemInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OMTSystemInfo.m; sourceTree = "<group>"; };
+		2CEC6057227E930100E50258 /* NSDictionary+YAHUnicode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+YAHUnicode.h"; sourceTree = "<group>"; };
+		2CEC6058227E930100E50258 /* NSDictionary+YAHUnicode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+YAHUnicode.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -283,6 +286,7 @@
 		2CBF14A621B03F2800CA2AED /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				2CEC6056227E930100E50258 /* NSDictionary */,
 				2C8D76F721B3628E00E90E41 /* NSData */,
 				2C8D770921B3628E00E90E41 /* NSDate */,
 				2C8D770C21B3628F00E90E41 /* NSObject */,
@@ -292,6 +296,15 @@
 				2C8D76E321B3628E00E90E41 /* UIImage */,
 			);
 			path = Category;
+			sourceTree = "<group>";
+		};
+		2CEC6056227E930100E50258 /* NSDictionary */ = {
+			isa = PBXGroup;
+			children = (
+				2CEC6057227E930100E50258 /* NSDictionary+YAHUnicode.h */,
+				2CEC6058227E930100E50258 /* NSDictionary+YAHUnicode.m */,
+			);
+			path = NSDictionary;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -387,6 +400,7 @@
 				2CB87CCE21AD9FEE0042D9F6 /* AppDelegate.m in Sources */,
 				2C8D772321B3628F00E90E41 /* NSDate+Utilities.m in Sources */,
 				2C8D772121B3628F00E90E41 /* NSString+Size_YAH.m in Sources */,
+				2CEC6059227E930100E50258 /* NSDictionary+YAHUnicode.m in Sources */,
 				2C8D771D21B3628F00E90E41 /* NSString+Hash_YAH.m in Sources */,
 				2C8D771521B3628F00E90E41 /* UIImage+SuperCompress.m in Sources */,
 				2C8D772221B3628F00E90E41 /* NSString+Base64_YAH.m in Sources */,
