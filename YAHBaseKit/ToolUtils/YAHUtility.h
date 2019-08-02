@@ -18,7 +18,7 @@ typedef enum
     ScreenSizeMode_97         //9.7英寸
 } ScreenSizeMode;
 
-@interface Utility : NSObject
+@interface YAHUtility : NSObject
 
 extern NSError *makeError(NSInteger errorCode, NSString *description);
 

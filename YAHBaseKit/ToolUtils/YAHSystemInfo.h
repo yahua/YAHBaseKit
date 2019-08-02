@@ -1,5 +1,5 @@
 //
-//  OMTSystemInfo.h
+//  YAHSystemInfo.h
 //  mobogo
 //
 //  Created by WangMingfu on 14/10/14.
@@ -22,40 +22,40 @@ dispatch_async(dispatch_get_main_queue(), block);\
 }
 
 #pragma mark - 设备屏幕尺寸
-#define OMT_SCREEN_SIZE                 ([UIScreen mainScreen].bounds.size)
-#define OMT_SCREEN_SIZE_WIDTH           ([UIScreen mainScreen].bounds.size.width)
-#define OMT_SCREEN_SIZE_HEIGHT          ([UIScreen mainScreen].bounds.size.height)
+#define YAH_SCREEN_SIZE                 ([UIScreen mainScreen].bounds.size)
+#define YAH_SCREEN_SIZE_WIDTH           ([UIScreen mainScreen].bounds.size.width)
+#define YAH_SCREEN_SIZE_HEIGHT          ([UIScreen mainScreen].bounds.size.height)
 //当前设备屏幕与4.7英寸屏幕的比例
-#define OMT_SCREEN_SCALE_WITH_47_INCH   (OMT_SCREEN_SIZE_WIDTH/375.0F)
+#define YAH_SCREEN_SCALE_WITH_47_INCH   (YAH_SCREEN_SIZE_WIDTH/375.0F)
 //获取当前设备屏幕相对于4.7英寸屏幕的长度
-#define OMT_SCALE_ZOOM(f)               (OMT_SCREEN_SCALE_WITH_47_INCH * ((float)f))
+#define YAH_SCALE_ZOOM(f)               (YAH_SCREEN_SCALE_WITH_47_INCH * ((float)f))
 
 //状态栏的高度
-#define OMT_STATUSBAR_SPACE             (IS_IPHONE_X ? 44.0f : 20.0f)
+#define YAH_STATUSBAR_SPACE             (IS_IPHONE_X ? 44.0f : 20.0f)
 //导航栏视图高度(不包含status bar的高度)
-#define OMT_NAVIGATIONBAR_SPAGE         (44.0f)
+#define YAH_NAVIGATIONBAR_SPAGE         (44.0f)
 //iPhone X底部栏的高度值
-#define OMT_BOTTOM_SPAGE                (34.0f)
+#define YAH_BOTTOM_SPAGE                (34.0f)
 
 //iOS tabbar 高度
-#define OMT_TABBAR_HEIGHT               (49.0f)
+#define YAH_TABBAR_HEIGHT               (49.0f)
 
-//status bar的高度,如果全屏模式取到的是0,非全屏数值和OMT_STATUSBAR_SPACE值一样
-#define OMT_STATUSBAR_HEIGHT            MIN(([[UIApplication sharedApplication] statusBarFrame].size.height), OMT_STATUSBAR_SPACE)
+//status bar的高度,如果全屏模式取到的是0,非全屏数值和YAH_STATUSBAR_SPACE值一样
+#define YAH_STATUSBAR_HEIGHT            MIN(([[UIApplication sharedApplication] statusBarFrame].size.height), YAH_STATUSBAR_SPACE)
 //导航栏高度(包括status bar的高度)
-#define OMT_NAVIGATIONBAR_HEIGHT        (OMT_NAVIGATIONBAR_SPAGE + OMT_STATUSBAR_HEIGHT)
+#define YAH_NAVIGATIONBAR_HEIGHT        (YAH_NAVIGATIONBAR_SPAGE + YAH_STATUSBAR_HEIGHT)
 //home底部栏高度,主要是为了适配iPhone X
-#define OMT_HOME_INDICATOR_HEIGHT       (IS_IPHONE_X ? OMT_BOTTOM_SPAGE : 0.0f)
+#define YAH_HOME_INDICATOR_HEIGHT       (IS_IPHONE_X ? YAH_BOTTOM_SPAGE : 0.0f)
 
 #pragma mark -
 
 #if (TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR)
 
-#define IOS11_OR_LATER      ( [OMTSystemInfo systemVersionMajorVersion] >= 11.0 )
-#define IOS10_OR_LATER        ( [OMTSystemInfo systemVersionMajorVersion] >= 10.0 )
-#define IOS9_OR_LATER        ( [OMTSystemInfo systemVersionMajorVersion] >= 9.0 )
-#define IOS8_OR_LATER        ( [OMTSystemInfo systemVersionMajorVersion] >= 8.0)
-#define IOS7_OR_LATER        ( [OMTSystemInfo systemVersionMajorVersion] >= 7.0 )
+#define IOS11_OR_LATER      ( [YAHSystemInfo systemVersionMajorVersion] >= 11.0 )
+#define IOS10_OR_LATER        ( [YAHSystemInfo systemVersionMajorVersion] >= 10.0 )
+#define IOS9_OR_LATER        ( [YAHSystemInfo systemVersionMajorVersion] >= 9.0 )
+#define IOS8_OR_LATER        ( [YAHSystemInfo systemVersionMajorVersion] >= 8.0)
+#define IOS7_OR_LATER        ( [YAHSystemInfo systemVersionMajorVersion] >= 7.0 )
 
 #define IOS10_OR_EARLIER    ( !IOS11_OR_LATER )
 #define IOS9_OR_EARLIER        ( !IOS10_OR_LATER )

@@ -21,6 +21,9 @@
     NSString *test = @"test";
     NSLog(@"%@", [test base64EncodedString]);
     
+    YAHLog(@"%@", [YAHSandbox docPath]);
+    YAHLog(@"%@", [YAHSandbox libCachePath]);
+    YAHLog(@"%@", [YAHSandbox tmpPath]);
 }
 
 

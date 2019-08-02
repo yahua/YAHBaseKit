@@ -6,6 +6,6 @@
 //  Copyright (c) 2014年 LTZD. All rights reserved.
 //
 
-#import "OMTSystemInfo.h"
+#import "YAHSystemInfo.h"
 
 

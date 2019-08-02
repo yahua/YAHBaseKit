@@ -7,12 +7,12 @@
 //
 
 #import <CommonCrypto/CommonDigest.h>
-#import "Utility.h"
+#import "YAHUtility.h"
 
 #define LS(key) NSLocalizedString(key, nil)
 #define CV_PI   3.1415926535897932384626433832795
 
-@implementation Utility
+@implementation YAHUtility
 
 NSError *makeError(NSInteger errorCode, NSString *description)
 {
@@ -106,7 +106,7 @@ NSError *makeError(NSInteger errorCode, NSString *description)
     }
     if (![parentFolder isEqualToString:@"/"] && ![fileManager fileExistsAtPath:parentFolder])
     {
-        if (![Utility createFolderWithFolder:parentFolder])
+        if (![YAHUtility createFolderWithFolder:parentFolder])
         {
             return NO;
         };
@@ -134,7 +134,7 @@ NSError *makeError(NSInteger errorCode, NSString *description)
     for (int i=0; i<[keys count]; i++) {
         NSString *name = [keys objectAtIndex:i];
         id valueObj = [dictionary objectForKey:name];
-        NSString *value = [Utility jsonStringWithObject:valueObj];
+        NSString *value = [YAHUtility jsonStringWithObject:valueObj];
         if (value) {
             [keyValues addObject:[NSString stringWithFormat:@"%@:%@",name,value]];
         }
@@ -150,11 +150,11 @@ NSError *makeError(NSInteger errorCode, NSString *description)
         return value;
     }
     if ([object isKindOfClass:[NSString class]]) {
-        value = [Utility jsonStringWithString:object];
+        value = [YAHUtility jsonStringWithString:object];
     }else if([object isKindOfClass:[NSDictionary class]]){
-        value = [Utility jsonStringWithDictionary:object];
+        value = [YAHUtility jsonStringWithDictionary:object];
     }else if([object isKindOfClass:[NSArray class]]){
-        value = [Utility jsonStringWithArray:object];
+        value = [YAHUtility jsonStringWithArray:object];
     }
     return value;
 }
@@ -170,7 +170,7 @@ NSError *makeError(NSInteger errorCode, NSString *description)
     [reString appendString:@"["];
     NSMutableArray *values = [NSMutableArray array];
     for (id valueObj in array) {
-        NSString *value = [Utility jsonStringWithObject:valueObj];
+        NSString *value = [YAHUtility jsonStringWithObject:valueObj];
         if (value) {
             [values addObject:[NSString stringWithFormat:@"%@",value]];
         }
@@ -283,7 +283,7 @@ NSError *makeError(NSInteger errorCode, NSString *description)
     for (NSValue *origPoint in origPoints) {
         CGPoint oPoint = [origPoint CGPointValue];
         
-        NSValue *tPointValue = [Utility transformPoint:oPoint referPoint:referPoint origSize:size tranSize:tSize angle:angle tansX:tansX tansY:transY];
+        NSValue *tPointValue = [YAHUtility transformPoint:oPoint referPoint:referPoint origSize:size tranSize:tSize angle:angle tansX:tansX tansY:transY];
         if (tPointValue != nil) {
             [transPoints addObject:tPointValue];
         }
