@@ -6,8 +6,8 @@
 //
 
 #import "NSDictionary+YAHUnicode.h"
-#import "../NSString/NSString+Contains_YAH.h"
-#import "../../extobjc/EXTScope.h"
+#import "NSString+Contains_YAH.h"
+#import "EXTScope.h"
 
 @implementation NSDictionary (YAHUnicode)
 
