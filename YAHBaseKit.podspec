@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "YAHBaseKit"
-  s.version      = "0.0.5"
+  s.version      = "0.0.6"
   s.summary      = "App common file"
 
   # This description is used to generate tags and improve search results.
@@ -140,10 +140,6 @@ Pod::Spec.new do |s|
     ss.subspec 'UIImage' do |sss|
       sss.public_header_files = 'YAHBaseKit/Category/UIImage/*.h'
       sss.source_files = 'YAHBaseKit/Category/UIImage'
-    end
-    ss.subspec 'NSDictionary' do |sss|
-      sss.public_header_files = 'YAHBaseKit/Category/NSDictionary/*.h'
-      sss.source_files = 'YAHBaseKit/Category/NSDictionary'
     end
   end
 
