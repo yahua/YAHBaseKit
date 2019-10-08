@@ -110,7 +110,7 @@ block(__VA_ARGS__);\
 
 #ifdef DEBUG
 #define LRString [NSString stringWithFormat:@"%s", __FILE__].lastPathComponent
-#define YAHLog(...) printf("%s %s 第%d行: %s\n\n",[[[NSDate date] stringWithFormat:@"YYYY-MM-dd hh:mm:ss.SSS"] UTF8String], [LRString UTF8String] ,__LINE__, [[NSString stringWithFormat:__VA_ARGS__] UTF8String]);
+#define YAHLog(format, ...) NSLog(format, ## __VA_ARGS__)
 #else
 #   define YAHLog(...)
 #endif
