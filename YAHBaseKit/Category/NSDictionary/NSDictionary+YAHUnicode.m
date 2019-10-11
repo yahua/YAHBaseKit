@@ -12,13 +12,13 @@
 @implementation NSDictionary (YAHUnicode)
 
 + (void)load {
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        Class class = [self class];
-        YAH_swizzleSelector(class, @selector(description), @selector(YAH_description));
-        YAH_swizzleSelector(class, @selector(descriptionWithLocale:), @selector(YAH_descriptionWithLocale:));
-        YAH_swizzleSelector(class, @selector(descriptionWithLocale:indent:), @selector(YAH_descriptionWithLocale:indent:));
-    });
+//    static dispatch_once_t onceToken;
+//    dispatch_once(&onceToken, ^{
+//        Class class = [self class];
+//        YAH_swizzleSelector(class, @selector(description), @selector(YAH_description));
+//        YAH_swizzleSelector(class, @selector(descriptionWithLocale:), @selector(YAH_descriptionWithLocale:));
+//        YAH_swizzleSelector(class, @selector(descriptionWithLocale:indent:), @selector(YAH_descriptionWithLocale:indent:));
+//    });
 }
 
 - (NSString *)YAH_description {
