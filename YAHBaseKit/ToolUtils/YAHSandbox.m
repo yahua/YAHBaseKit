@@ -116,10 +116,7 @@
 {
     if ( nil == _tmpPath )
     {
-        NSArray * paths = NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES);
-        NSString * path = [[paths objectAtIndex:0] stringByAppendingFormat:@"/tmp"];
-        
-        _tmpPath = path;
+        _tmpPath = NSTemporaryDirectory();
     }
     
     return _tmpPath;
