@@ -40,6 +40,7 @@
 		2CB87CDC21AD9FEF0042D9F6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CB87CDB21AD9FEF0042D9F6 /* main.m */; };
 		2CBF149821B03E7F00CA2AED /* EXTScope.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CBF145C21B03E7F00CA2AED /* EXTScope.m */; };
 		2CEC6059227E930100E50258 /* NSDictionary+YAHUnicode.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CEC6058227E930100E50258 /* NSDictionary+YAHUnicode.m */; };
+		2CFD9CC6236FBF33008F85E2 /* UIDevice+YAHBattery.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CFD9CC5236FBF33008F85E2 /* UIDevice+YAHBattery.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -110,6 +111,8 @@
 		2CBF146921B03E7F00CA2AED /* YAHBaseKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YAHBaseKit.h; sourceTree = "<group>"; };
 		2CEC6057227E930100E50258 /* NSDictionary+YAHUnicode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+YAHUnicode.h"; sourceTree = "<group>"; };
 		2CEC6058227E930100E50258 /* NSDictionary+YAHUnicode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+YAHUnicode.m"; sourceTree = "<group>"; };
+		2CFD9CC4236FBF33008F85E2 /* UIDevice+YAHBattery.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIDevice+YAHBattery.h"; sourceTree = "<group>"; };
+		2CFD9CC5236FBF33008F85E2 /* UIDevice+YAHBattery.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+YAHBattery.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +135,8 @@
 				2C8D769D21B3626E00E90E41 /* YAHUtility.m */,
 				2C10CE88236FB603001B3BC4 /* UIDevice+YAH.h */,
 				2C10CE89236FB603001B3BC4 /* UIDevice+YAH.m */,
+				2CFD9CC4236FBF33008F85E2 /* UIDevice+YAHBattery.h */,
+				2CFD9CC5236FBF33008F85E2 /* UIDevice+YAHBattery.m */,
 			);
 			path = ToolUtils;
 			sourceTree = "<group>";
@@ -390,6 +395,7 @@
 				2C8D771421B3628F00E90E41 /* UIImage+Orientation.m in Sources */,
 				2CBF149821B03E7F00CA2AED /* EXTScope.m in Sources */,
 				2C8D772021B3628F00E90E41 /* NSString+Transfer_YAH.m in Sources */,
+				2CFD9CC6236FBF33008F85E2 /* UIDevice+YAHBattery.m in Sources */,
 				2C8D771221B3628F00E90E41 /* UIImage+Blur.m in Sources */,
 				2C8D771E21B3628F00E90E41 /* NSString+Contains_YAH.m in Sources */,
 				2C8D772921B362E700E90E41 /* YAHKVOController.m in Sources */,
