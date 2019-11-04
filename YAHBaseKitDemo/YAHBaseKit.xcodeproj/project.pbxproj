@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C10CE8A236FB603001B3BC4 /* UIDevice+YAH.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C10CE89236FB603001B3BC4 /* UIDevice+YAH.m */; };
 		2C8D769F21B3626E00E90E41 /* YAHUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8D769D21B3626E00E90E41 /* YAHUtility.m */; };
 		2C8D771221B3628F00E90E41 /* UIImage+Blur.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8D76E521B3628E00E90E41 /* UIImage+Blur.m */; };
 		2C8D771321B3628F00E90E41 /* UIImage+FileName.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8D76E821B3628E00E90E41 /* UIImage+FileName.m */; };
@@ -38,11 +39,12 @@
 		2CB87CD921AD9FEF0042D9F6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CB87CD721AD9FEF0042D9F6 /* LaunchScreen.storyboard */; };
 		2CB87CDC21AD9FEF0042D9F6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CB87CDB21AD9FEF0042D9F6 /* main.m */; };
 		2CBF149821B03E7F00CA2AED /* EXTScope.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CBF145C21B03E7F00CA2AED /* EXTScope.m */; };
-		2CEC6055227E892300E50258 /* YAHSystemInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CEC6054227E892300E50258 /* YAHSystemInfo.m */; };
 		2CEC6059227E930100E50258 /* NSDictionary+YAHUnicode.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CEC6058227E930100E50258 /* NSDictionary+YAHUnicode.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2C10CE88236FB603001B3BC4 /* UIDevice+YAH.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIDevice+YAH.h"; sourceTree = "<group>"; };
+		2C10CE89236FB603001B3BC4 /* UIDevice+YAH.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+YAH.m"; sourceTree = "<group>"; };
 		2C8D769D21B3626E00E90E41 /* YAHUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YAHUtility.m; sourceTree = "<group>"; };
 		2C8D769E21B3626E00E90E41 /* YAHUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YAHUtility.h; sourceTree = "<group>"; };
 		2C8D76E421B3628E00E90E41 /* UIImage+SuperCompress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+SuperCompress.h"; sourceTree = "<group>"; };
@@ -106,8 +108,6 @@
 		2CBF145D21B03E7F00CA2AED /* EXTScope.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXTScope.h; sourceTree = "<group>"; };
 		2CBF145E21B03E7F00CA2AED /* EXTKeyPathCoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXTKeyPathCoding.h; sourceTree = "<group>"; };
 		2CBF146921B03E7F00CA2AED /* YAHBaseKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YAHBaseKit.h; sourceTree = "<group>"; };
-		2CEC6053227E892300E50258 /* YAHSystemInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YAHSystemInfo.h; sourceTree = "<group>"; };
-		2CEC6054227E892300E50258 /* YAHSystemInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YAHSystemInfo.m; sourceTree = "<group>"; };
 		2CEC6057227E930100E50258 /* NSDictionary+YAHUnicode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+YAHUnicode.h"; sourceTree = "<group>"; };
 		2CEC6058227E930100E50258 /* NSDictionary+YAHUnicode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+YAHUnicode.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -128,10 +128,10 @@
 			children = (
 				2C9ACFFF22F4096400CFDC19 /* YAHSandbox.h */,
 				2C9AD00022F4096400CFDC19 /* YAHSandbox.m */,
-				2CEC6053227E892300E50258 /* YAHSystemInfo.h */,
-				2CEC6054227E892300E50258 /* YAHSystemInfo.m */,
-				2C8D769D21B3626E00E90E41 /* YAHUtility.m */,
 				2C8D769E21B3626E00E90E41 /* YAHUtility.h */,
+				2C8D769D21B3626E00E90E41 /* YAHUtility.m */,
+				2C10CE88236FB603001B3BC4 /* UIDevice+YAH.h */,
+				2C10CE89236FB603001B3BC4 /* UIDevice+YAH.m */,
 			);
 			path = ToolUtils;
 			sourceTree = "<group>";
@@ -387,7 +387,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2CEC6055227E892300E50258 /* YAHSystemInfo.m in Sources */,
 				2C8D771421B3628F00E90E41 /* UIImage+Orientation.m in Sources */,
 				2CBF149821B03E7F00CA2AED /* EXTScope.m in Sources */,
 				2C8D772021B3628F00E90E41 /* NSString+Transfer_YAH.m in Sources */,
@@ -404,6 +403,7 @@
 				2C8D772521B3628F00E90E41 /* UIColor+HEX.m in Sources */,
 				2C8D771921B3628F00E90E41 /* NSTimer+Blocks.m in Sources */,
 				2C8D771821B3628F00E90E41 /* UIImage+FX.m in Sources */,
+				2C10CE8A236FB603001B3BC4 /* UIDevice+YAH.m in Sources */,
 				2C8D769F21B3626E00E90E41 /* YAHUtility.m in Sources */,
 				2C8D771621B3628F00E90E41 /* UIImage+RTTint.m in Sources */,
 				2C8D771721B3628F00E90E41 /* UIImage+Color.m in Sources */,

@@ -17,7 +17,7 @@
 
 //ToolUtils
 #import "YAHUtility.h"
-#import "YAHSystemInfo.h"
+#import "UIDevice+YAH.h"
 #import "YAHSandbox.h"
 
 //NSData

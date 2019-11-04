@@ -9,20 +9,23 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-typedef enum
-{
-    ScreenSizeMode_35 = 0,    //3.5英寸
-    ScreenSizeMode_40,        //4英寸
-    ScreenSizeMode_47,        //4.7英寸
-    ScreenSizeMode_55,        //5.5英寸
-    ScreenSizeMode_97         //9.7英寸
-} ScreenSizeMode;
+#define dispatch_main_sync_safe(block)\
+if ([NSThread isMainThread]) {\
+block();\
+} else {\
+dispatch_sync(dispatch_get_main_queue(), block);\
+}
+
+#define dispatch_main_async_safe(block)\
+if ([NSThread isMainThread]) {\
+block();\
+} else {\
+dispatch_async(dispatch_get_main_queue(), block);\
+}
 
 @interface YAHUtility : NSObject
 
 extern NSError *makeError(NSInteger errorCode, NSString *description);
-
-+ (ScreenSizeMode)getScreenSizeMode;
 
 // 计算年龄
 + (NSString*)fromDateToAge:(NSDate*)date;

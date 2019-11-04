@@ -24,32 +24,6 @@ NSError *makeError(NSInteger errorCode, NSString *description)
     return [[NSError alloc] initWithDomain:desc code:errorCode userInfo:nil];
 }
 
-+ (ScreenSizeMode)getScreenSizeMode
-{
-    CGRect screenSize = [[UIScreen mainScreen] bounds];
-    NSInteger screenHeight = screenSize.size.height;
-    if (screenHeight == 480)
-    {
-        return ScreenSizeMode_35;
-    }
-    else if (screenHeight == 568)
-    {
-        return ScreenSizeMode_40;
-    }
-    else if (screenHeight == 667)
-    {
-        return ScreenSizeMode_47;
-    }
-    else if (screenHeight == 736)
-    {
-        return ScreenSizeMode_55;
-    }
-    else if (screenHeight == 1024)
-    {
-        return ScreenSizeMode_97;
-    }
-    return ScreenSizeMode_35;
-}
 //版本
 + (NSString *)appVersion
 {

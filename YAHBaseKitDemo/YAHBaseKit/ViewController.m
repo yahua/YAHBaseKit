@@ -8,6 +8,8 @@
 
 #import "ViewController.h"
 #import "YAHBaseKit.h"
+#import "sys/utsname.h"
+
 
 @interface ViewController ()
 
@@ -24,6 +26,15 @@
     YAHLog(@"%@", [YAHSandbox docPath]);
     YAHLog(@"%@", [YAHSandbox libCachePath]);
     YAHLog(@"%@", [YAHSandbox tmpPath]);
+    
+    struct utsname systemInfo;
+    uname(&systemInfo);
+    NSString *deviceString = [NSString stringWithCString:systemInfo.machine encoding:NSUTF8StringEncoding];
+    
+    YAHLog(@"yah_isIPhoneX %@", @([UIDevice yah_isIPhoneX]));
+    YAHLog(@"yah_isIPhoneXR %@", @([UIDevice yah_isIPhoneXR]));
+    YAHLog(@"yah_isIPhone6 %@", @([UIDevice yah_isIPhone6]));
+    
 }
 
 
