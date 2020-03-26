@@ -24,6 +24,13 @@ NSError *makeError(NSInteger errorCode, NSString *description)
     return [[NSError alloc] initWithDomain:desc code:errorCode userInfo:nil];
 }
 
++ (NSString *)appName {
+    
+    NSDictionary *infoDictionary = [[NSBundle mainBundle] infoDictionary];
+    NSString *name = [infoDictionary objectForKey:@"CFBundleDisplayName"];
+    return name;
+}
+
 //版本
 + (NSString *)appVersion
 {

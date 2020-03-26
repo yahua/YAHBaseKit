@@ -30,6 +30,7 @@ extern NSError *makeError(NSInteger errorCode, NSString *description);
 // 计算年龄
 + (NSString*)fromDateToAge:(NSDate*)date;
 
++ (NSString *)appName;
 + (NSString *)appVersion;
 + (NSInteger)appVersionCode;
 + (NSString *)appBundleIdentifier;
