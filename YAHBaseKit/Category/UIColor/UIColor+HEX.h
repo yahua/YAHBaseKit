@@ -22,4 +22,7 @@
 + (UIColor *)colorWithWholeRed:(CGFloat)red
                          green:(CGFloat)green
                           blue:(CGFloat)blue;
+
++ (UIColor *)color:(UIColor *)color_ withAlpha:(float)alpha_;
+
 @end

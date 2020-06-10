@@ -103,4 +103,26 @@ CGFloat colorComponentFrom(NSString *string, NSUInteger start, NSUInteger length
                               blue:blue
                              alpha:1.0];
 }
+
++ (UIColor *)color:(UIColor *)color_ withAlpha:(float)alpha_
+{
+    UIColor *uicolor = color_;
+    CGColorRef colorRef = [uicolor CGColor];
+    
+    size_t numComponents = CGColorGetNumberOfComponents(colorRef);
+    
+    CGFloat red = 0.0;
+    CGFloat green = 0.0;
+    CGFloat blue = 0.0;
+    if (numComponents == 4)
+    {
+        const CGFloat *components = CGColorGetComponents(colorRef);
+        red = components[0];
+        green = components[1];
+        blue = components[2];
+    }
+    
+    return [UIColor colorWithRed:red green:green blue:blue alpha:alpha_];
+}
+
 @end

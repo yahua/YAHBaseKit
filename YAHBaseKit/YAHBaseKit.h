@@ -36,6 +36,8 @@
 #import "NSString+Hash_YAH.h"
 #import "NSString+Transfer_YAH.h"
 
+#import "NSArray+YAH.h"
+
 //NSStimer
 #import "NSTimer+Addition.h"
 #import "NSTimer+Blocks.h"

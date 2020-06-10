@@ -145,6 +145,10 @@ Pod::Spec.new do |s|
       sss.public_header_files = 'YAHBaseKit/Category/NSDictionary/*.h'
       sss.source_files = 'YAHBaseKit/Category/NSDictionary'
     end
+    ss.subspec 'NSArray' do |sss|
+      sss.public_header_files = 'YAHBaseKit/Category/NSArray/*.h'
+      sss.source_files = 'YAHBaseKit/Category/NSArray'
+    end
   end
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
