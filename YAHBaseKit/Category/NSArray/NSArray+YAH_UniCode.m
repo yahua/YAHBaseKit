@@ -1,15 +1,14 @@
 //
-//  NSDictionary+YAHUnicode.m
+//  NSArray+YAH_UniCode.m
 //  YAHBaseKit
 //
-//  Created by wangshiwen on 2018/12/11.
+//  Created by yahua on 2020/7/10.
+//  Copyright © 2020 yahua. All rights reserved.
 //
 
-#import "NSDictionary+YAHUnicode.h"
-#import "../NSString/NSString+Contains_YAH.h"
-#import "../../extobjc/EXTScope.h"
+#import "NSArray+YAH_UniCode.h"
 
-@implementation NSDictionary (YAHUnicode)
+@implementation NSArray (YAH_UniCode)
 
 #if DEBUG
 - (NSString *)descriptionWithLocale:(id)locale indent:(NSUInteger)level {
@@ -24,19 +23,16 @@
   if (level > 0) {
     tab = tabString;
   }
+  [desc appendString:@"\t(\n"];
   
-  [desc appendString:@"\t{\n"];
-  
-  // 遍历数组,self就是当前的数组
-  for (id key in self.allKeys) {
-    id obj = [self objectForKey:key];
-    
-    if ([obj isKindOfClass:[NSString class]]) {
-      [desc appendFormat:@"%@\t%@ = \"%@\",\n", tab, key, obj];
-    } else if ([obj isKindOfClass:[NSArray class]]
-               || [obj isKindOfClass:[NSDictionary class]]
-               || [obj isKindOfClass:[NSSet class]]) {
-      [desc appendFormat:@"%@\t%@ = %@,\n", tab, key, [obj descriptionWithLocale:locale indent:level + 1]];
+  for (id obj in self) {
+    if ([obj isKindOfClass:[NSDictionary class]]
+        || [obj isKindOfClass:[NSArray class]]
+        || [obj isKindOfClass:[NSSet class]]) {
+      NSString *str = [((NSDictionary *)obj) descriptionWithLocale:locale indent:level + 1];
+      [desc appendFormat:@"%@\t%@,\n", tab, str];
+    } else if ([obj isKindOfClass:[NSString class]]) {
+      [desc appendFormat:@"%@\t\"%@\",\n", tab, obj];
     } else if ([obj isKindOfClass:[NSData class]]) {
       // 如果是NSData类型，尝试去解析结果，以打印出可阅读的数据
       NSError *error = nil;
@@ -49,32 +45,33 @@
             || [result isKindOfClass:[NSArray class]]
             || [result isKindOfClass:[NSSet class]]) {
           NSString *str = [((NSDictionary *)result) descriptionWithLocale:locale indent:level + 1];
-          [desc appendFormat:@"%@\t%@ = %@,\n", tab, key, str];
+          [desc appendFormat:@"%@\t%@,\n", tab, str];
         } else if ([obj isKindOfClass:[NSString class]]) {
-          [desc appendFormat:@"%@\t%@ = \"%@\",\n", tab, key, result];
+          [desc appendFormat:@"%@\t\"%@\",\n", tab, result];
         }
       } else {
         @try {
           NSString *str = [[NSString alloc] initWithData:obj encoding:NSUTF8StringEncoding];
           if (str != nil) {
-            [desc appendFormat:@"%@\t%@ = \"%@\",\n", tab, key, str];
+            [desc appendFormat:@"%@\t\"%@\",\n", tab, str];
           } else {
-            [desc appendFormat:@"%@\t%@ = %@,\n", tab, key, obj];
+            [desc appendFormat:@"%@\t%@,\n", tab, obj];
           }
         }
         @catch (NSException *exception) {
-          [desc appendFormat:@"%@\t%@ = %@,\n", tab, key, obj];
+          [desc appendFormat:@"%@\t%@,\n", tab, obj];
         }
       }
     } else {
-      [desc appendFormat:@"%@\t%@ = %@,\n", tab, key, obj];
+      [desc appendFormat:@"%@\t%@,\n", tab, obj];
     }
   }
   
-  [desc appendFormat:@"%@}", tab];
+  [desc appendFormat:@"%@)", tab];
   
   return desc;
 }
 #endif
+//copy: https://github.com/524429264/HYBUnicodeReadable/blob/master/HYBUnicodeReadable/NSArray%2BHYBUnicodeReadable.m
 
 @end
