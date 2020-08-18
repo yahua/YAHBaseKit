@@ -114,6 +114,7 @@ block(__VA_ARGS__);\
 #define YAHLog(...) NSLog(@"%@ 第%td行: %@\n", LRString ,__LINE__, [NSString stringWithFormat:__VA_ARGS__]);
 
 #else
+#define LRString [NSString stringWithFormat:@"%s", __FILE__].lastPathComponent
 #define YAHLog(...) NSLog(@"%@ 第%td行: %@\n", LRString ,__LINE__, [NSString stringWithFormat:__VA_ARGS__]);
 #endif
 
