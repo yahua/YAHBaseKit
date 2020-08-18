@@ -110,11 +110,11 @@ block(__VA_ARGS__);\
 
 #ifdef DEBUG
 #define LRString [NSString stringWithFormat:@"%s", __FILE__].lastPathComponent
-#define YAHLog(...) printf("%s %s 第%d行: %s\n\n",[[[NSDate date] stringWithFormat:@"YYYY-MM-dd hh:mm:ss.SSS"] UTF8String], [LRString UTF8String] ,__LINE__, [[NSString stringWithFormat:__VA_ARGS__] UTF8String]);
-
+//#define YAHLog(...) printf("%s %s 第%d行: %s\n\n",[[[NSDate date] stringWithFormat:@"YYYY-MM-dd hh:mm:ss.SSS"] UTF8String], [LRString UTF8String] ,__LINE__, [[NSString stringWithFormat:__VA_ARGS__] UTF8String]);
+#define YAHLog(...) NSLog(@"%@ 第%td行: %@\n", LRString ,__LINE__, [NSString stringWithFormat:__VA_ARGS__]);
 
 #else
-#   define YAHLog(...)
+#define YAHLog(...) NSLog(@"%@ 第%td行: %@\n", LRString ,__LINE__, [NSString stringWithFormat:__VA_ARGS__]);
 #endif
 
 static inline void YAH_swizzleSelector(Class zclass, SEL originalSelector, SEL swizzledSelector) {
