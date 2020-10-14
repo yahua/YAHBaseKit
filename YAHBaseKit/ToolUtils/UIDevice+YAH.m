@@ -65,6 +65,9 @@
         }else if (height == 896 && width == 414)
         {
             screenType = YAHScreenTypeIphoneXR;
+        }else {
+            //其它新机型默认iphoneX
+            screenType = YAHScreenTypeIphoneX;
         }
     }
     return screenType;
