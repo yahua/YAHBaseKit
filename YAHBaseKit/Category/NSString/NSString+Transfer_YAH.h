@@ -21,8 +21,11 @@
 /** 校正手机号*/
 - (NSString *)adjustmentPhone;
 
+/// 删除字符串的空格
 - (NSString *)removeSpace;
 
+/// 字符串防止nil处理，如果是nil则返回空
+/// @param orgString 处理前的字符串
 + (NSString *)yah_formalNilString:(NSString *)orgString;
 
 @end
