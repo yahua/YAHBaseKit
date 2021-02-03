@@ -27,6 +27,8 @@
     YAHLog(@"%@", [YAHSandbox libCachePath]);
     YAHLog(@"%@", [YAHSandbox tmpPath]);
     
+    YAHLog(@"%@", [UIDevice yah_IPAddress]);
+    
     struct utsname systemInfo;
     uname(&systemInfo);
     NSString *deviceString = [NSString stringWithCString:systemInfo.machine encoding:NSUTF8StringEncoding];
