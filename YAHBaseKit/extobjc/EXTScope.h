@@ -106,6 +106,20 @@ block(__VA_ARGS__);\
 }
 #endif
 
+#ifndef dispatch_async_main_if_nonnull
+#define dispatch_async_main_if_nonnull(block, ...)\
+if(!block) {\
+    return;\
+}\
+if ([NSThread isMainThread]) {\
+    block(__VA_ARGS__);\
+}else {\
+    dispatch_async(dispatch_get_main_queue(), ^{\
+        block(__VA_ARGS__);\
+    });\
+}
+#endif
+
 #define YAH_Localized(key)  NSLocalizedString(key,nil)
 
 #ifdef DEBUG
